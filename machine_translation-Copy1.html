@@ -11788,7 +11788,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
@@ -11800,10 +11800,29 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">collections</span>
@@ -11841,7 +11860,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow.python.client</span> <span class="k">import</span> <span class="n">device_lib</span>
@@ -11849,6 +11868,38 @@ div#notebook {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[name: &#34;/cpu:0&#34;
+device_type: &#34;CPU&#34;
+memory_limit: 268435456
+locality {
+}
+incarnation: 16091315622794081085
+, name: &#34;/gpu:0&#34;
+device_type: &#34;GPU&#34;
+memory_limit: 312147968
+locality {
+  bus_id: 1
+}
+incarnation: 17952868570947370722
+physical_device_desc: &#34;device: 0, name: Tesla K80, pci bus id: 0000:00:04.0&#34;
+]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -11865,7 +11916,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load English data</span>
@@ -11877,6 +11928,24 @@ div#notebook {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Dataset Loaded
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -11892,7 +11961,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">sample_i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
@@ -11901,6 +11970,60 @@ div#notebook {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>small_vocab_en Line 1:  new jersey is sometimes quiet during autumn , and it is snowy in april .
+small_vocab_fr Line 1:  new jersey est parfois calme pendant l&#39; automne , et il est neigeux en avril .
+small_vocab_en Line 2:  the united states is usually chilly during july , and it is usually freezing in november .
+small_vocab_fr Line 2:  les états-unis est généralement froid en juillet , et il gèle habituellement en novembre .
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">english_sentences</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[43]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>137861</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -11917,7 +12040,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">english_words_counter</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">([</span><span class="n">word</span> <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">english_sentences</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()])</span>
@@ -11935,6 +12058,32 @@ div#notebook {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1823250 English words.
+227 unique English words.
+10 Most common words in the English dataset:
+&#34;is&#34; &#34;,&#34; &#34;.&#34; &#34;in&#34; &#34;it&#34; &#34;during&#34; &#34;the&#34; &#34;but&#34; &#34;and&#34; &#34;sometimes&#34;
+
+1961295 French words.
+355 unique French words.
+10 Most common words in the French dataset:
+&#34;est&#34; &#34;.&#34; &#34;,&#34; &#34;en&#34; &#34;il&#34; &#34;les&#34; &#34;mais&#34; &#34;et&#34; &#34;la&#34; &#34;parfois&#34;
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -11960,7 +12109,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -11970,7 +12119,29 @@ div#notebook {
 <span class="sd">    :return: Tuple of (tokenized x data, tokenizer used to tokenize x)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement</span>
-    <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="k">class</span> <span class="nc">tokenizer</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">word_index</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tokenized</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">def</span> <span class="nf">texts_to_sequences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sentences</span><span class="p">):</span>
+            <span class="n">split_sentences</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">]</span>
+            <span class="c1"># removing punctuation</span>
+            <span class="n">punctuation</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tokenized</span> <span class="o">=</span> <span class="p">[[</span><span class="n">token</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">split</span> <span class="k">if</span> <span class="n">token</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">punctuation</span><span class="p">]</span> <span class="k">for</span> <span class="n">split</span> <span class="ow">in</span> <span class="n">split_sentences</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">word_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_word_index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tokenized</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tokenized</span>
+        <span class="k">def</span> <span class="nf">generate_word_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tokenseq</span><span class="p">):</span>
+            <span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">tokenseq</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+                        <span class="n">words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="n">index</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">)}</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">()</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">texts_to_sequences</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">t</span><span class="o">.</span><span class="n">tokenized</span><span class="p">,</span> <span class="n">t</span>
 <span class="n">tests</span><span class="o">.</span><span class="n">test_tokenize</span><span class="p">(</span><span class="n">tokenize</span><span class="p">)</span>
 
 <span class="c1"># Tokenize Example output</span>
@@ -11991,6 +12162,34 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;The&#39;: 0, &#39;quick&#39;: 1, &#39;brown&#39;: 2, &#39;fox&#39;: 3, &#39;jumps&#39;: 4, &#39;over&#39;: 5, &#39;the&#39;: 6, &#39;lazy&#39;: 7, &#39;dog&#39;: 8, &#39;By&#39;: 9, &#39;Jove&#39;: 10, &#39;my&#39;: 11, &#39;study&#39;: 12, &#39;of&#39;: 13, &#39;lexicography&#39;: 14, &#39;won&#39;: 15, &#39;a&#39;: 16, &#39;prize&#39;: 17, &#39;This&#39;: 18, &#39;is&#39;: 19, &#39;short&#39;: 20, &#39;sentence&#39;: 21}
+
+Sequence 1 in x
+  Input:  The quick brown fox jumps over the lazy dog .
+  Output: [&#39;The&#39;, &#39;quick&#39;, &#39;brown&#39;, &#39;fox&#39;, &#39;jumps&#39;, &#39;over&#39;, &#39;the&#39;, &#39;lazy&#39;, &#39;dog&#39;]
+Sequence 2 in x
+  Input:  By Jove , my quick study of lexicography won a prize .
+  Output: [&#39;By&#39;, &#39;Jove&#39;, &#39;my&#39;, &#39;quick&#39;, &#39;study&#39;, &#39;of&#39;, &#39;lexicography&#39;, &#39;won&#39;, &#39;a&#39;, &#39;prize&#39;]
+Sequence 3 in x
+  Input:  This is a short sentence .
+  Output: [&#39;This&#39;, &#39;is&#39;, &#39;a&#39;, &#39;short&#39;, &#39;sentence&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12004,7 +12203,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pad</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -12015,7 +12214,20 @@ div#notebook {
 <span class="sd">    :return: Padded numpy array of sequences</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement</span>
-    <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">def</span> <span class="nf">generate_word_index</span><span class="p">(</span><span class="n">tokenseq</span><span class="p">):</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">tokenseq</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+                    <span class="n">words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="n">index</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">)}</span>
+    
+    <span class="n">word_ids</span> <span class="o">=</span> <span class="n">generate_word_index</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">id_x</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="n">id_x</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">word_ids</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">])</span>
+        
+    <span class="k">return</span> <span class="n">pad_sequences</span><span class="p">(</span><span class="n">id_x</span><span class="p">,</span> <span class="n">maxlen</span><span class="o">=</span><span class="n">length</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;post&#39;</span><span class="p">)</span>
 <span class="n">tests</span><span class="o">.</span><span class="n">test_pad</span><span class="p">(</span><span class="n">pad</span><span class="p">)</span>
 
 <span class="c1"># Pad Tokenized output</span>
@@ -12027,6 +12239,32 @@ div#notebook {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Sequence 1 in x
+  Input:  [&#39;The&#39; &#39;quick&#39; &#39;brown&#39; &#39;fox&#39; &#39;jumps&#39; &#39;over&#39; &#39;the&#39; &#39;lazy&#39; &#39;dog&#39;]
+  Output: [0 1 2 3 4 5 6 7 8 0]
+Sequence 2 in x
+  Input:  [&#39;By&#39; &#39;Jove&#39; &#39;my&#39; &#39;quick&#39; &#39;study&#39; &#39;of&#39; &#39;lexicography&#39; &#39;won&#39; &#39;a&#39; &#39;prize&#39;]
+  Output: [ 9 10 11  1 12 13 14 15 16 17]
+Sequence 3 in x
+  Input:  [&#39;This&#39; &#39;is&#39; &#39;a&#39; &#39;short&#39; &#39;sentence&#39;]
+  Output: [18 19 16 20 21  0  0  0  0  0]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12042,7 +12280,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">preprocess</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -12082,6 +12320,28 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Data Preprocessed
+Max English sentence length: 15
+Max French sentence length: 21
+English vocabulary size: 224
+French vocabulary size: 352
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12103,7 +12363,7 @@ You will begin by training four relatively simple architectures.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">logits_to_text</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">):</span>
@@ -12125,6 +12385,24 @@ You will begin by training four relatively simple architectures.</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>`logits_to_text` function loaded.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12138,43 +12416,106 @@ A basic RNN model is a good baseline for sequence data.  In this model, you'll b
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">simple_model</span><span class="p">(</span><span class="n">input_shape</span><span class="p">,</span> <span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">english_vocab_size</span><span class="p">,</span> <span class="n">french_vocab_size</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Build and train a basic RNN on x and y</span>
-<span class="sd">    :param input_shape: Tuple of input shape</span>
-<span class="sd">    :param output_sequence_length: Length of output sequence</span>
-<span class="sd">    :param english_vocab_size: Number of unique English words in the dataset</span>
-<span class="sd">    :param french_vocab_size: Number of unique French words in the dataset</span>
-<span class="sd">    :return: Keras model built, but not trained</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># TODO: Build the layers</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="n">sparse_categorical_crossentropy</span><span class="p">,</span>
-                  <span class="n">optimizer</span><span class="o">=</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">),</span>
-                  <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">model</span>
-<span class="n">tests</span><span class="o">.</span><span class="n">test_simple_model</span><span class="p">(</span><span class="n">simple_model</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+def simple_model(input_shape, output_sequence_length, english_vocab_size, french_vocab_size):
+    &quot;&quot;&quot;
+    Build and train a basic RNN on x and y
+    :param input_shape: Tuple of input shape
+    :param output_sequence_length: Length of output sequence
+    :param english_vocab_size: Number of unique English words in the dataset
+    :param french_vocab_size: Number of unique French words in the dataset
+    :return: Keras model built, but not trained
+    &quot;&quot;&quot;
+    # TODO: Build the layers
+    inputs = Input(shape=input_shape[1:])
+    x = GRU(256, return_sequences=True)(inputs)
+    x = TimeDistributed(Dense(512, activation=&#39;relu&#39;))(x)
+    outputs = Dense(french_vocab_size, activation=&#39;softmax&#39;)(x)
+    model = Model(inputs=inputs, outputs=outputs)
+    model.compile(loss=&#39;sparse_categorical_crossentropy&#39;, metrics=[&#39;accuracy&#39;], optimizer=&#39;adam&#39;)
 
-<span class="c1"># Reshaping the input to work with a basic RNN</span>
-<span class="n">tmp_x</span> <span class="o">=</span> <span class="n">pad</span><span class="p">(</span><span class="n">preproc_english_sentences</span><span class="p">,</span> <span class="n">max_french_sequence_length</span><span class="p">)</span>
-<span class="n">tmp_x</span> <span class="o">=</span> <span class="n">tmp_x</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">preproc_french_sentences</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span>
+    return model
 
-<span class="c1"># Train the neural network</span>
-<span class="n">simple_rnn_model</span> <span class="o">=</span> <span class="n">simple_model</span><span class="p">(</span>
-    <span class="n">tmp_x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span>
-    <span class="n">max_french_sequence_length</span><span class="p">,</span>
-    <span class="n">english_vocab_size</span><span class="p">,</span>
-    <span class="n">french_vocab_size</span><span class="p">)</span>
-<span class="n">simple_rnn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tmp_x</span><span class="p">,</span> <span class="n">preproc_french_sentences</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+tests.test_simple_model(simple_model)
 
-<span class="c1"># Print prediction(s)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">logits_to_text</span><span class="p">(</span><span class="n">simple_rnn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tmp_x</span><span class="p">[:</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">],</span> <span class="n">french_tokenizer</span><span class="p">))</span>
+# Reshaping the input to work with a basic RNN
+tmp_x = pad(preproc_english_sentences, max_french_sequence_length)
+tmp_x = tmp_x.reshape((-1, preproc_french_sentences.shape[-2], 1))
+
+# Train the neural network
+simple_rnn_model = simple_model(
+    tmp_x.shape,
+    max_french_sequence_length,
+    english_vocab_size,
+    french_vocab_size)
+print(simple_rnn_model.summary())
+simple_rnn_model.fit(tmp_x, preproc_french_sentences, batch_size=1024, epochs=10, validation_split=0.2)
+
+# Print prediction(s)
+print(logits_to_text(simple_rnn_model.predict(tmp_x[:1])[0], french_tokenizer))
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_23 (InputLayer)        (None, 21, 1)             0         
+_________________________________________________________________
+gru_23 (GRU)                 (None, 21, 256)           198144    
+_________________________________________________________________
+time_distributed_23 (TimeDis (None, 21, 512)           131584    
+_________________________________________________________________
+dense_46 (Dense)             (None, 21, 352)           180576    
+=================================================================
+Total params: 510,304
+Trainable params: 510,304
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 110288 samples, validate on 27573 samples
+Epoch 1/10
+110288/110288 [==============================] - 14s 130us/step - loss: 2.4327 - acc: 0.4968 - val_loss: 1.8149 - val_acc: 0.5585
+Epoch 2/10
+110288/110288 [==============================] - 13s 116us/step - loss: 1.5358 - acc: 0.6074 - val_loss: 1.3003 - val_acc: 0.6566
+Epoch 3/10
+110288/110288 [==============================] - 13s 116us/step - loss: 1.1936 - acc: 0.6698 - val_loss: 1.1008 - val_acc: 0.6871
+Epoch 4/10
+110288/110288 [==============================] - 13s 116us/step - loss: 1.0424 - acc: 0.6997 - val_loss: 0.9886 - val_acc: 0.7087
+Epoch 5/10
+110288/110288 [==============================] - 13s 116us/step - loss: 0.9549 - acc: 0.7164 - val_loss: 0.9330 - val_acc: 0.7188
+Epoch 6/10
+110288/110288 [==============================] - 13s 116us/step - loss: 0.8952 - acc: 0.7285 - val_loss: 0.8790 - val_acc: 0.7329
+Epoch 7/10
+110288/110288 [==============================] - 13s 116us/step - loss: 0.8481 - acc: 0.7396 - val_loss: 0.8338 - val_acc: 0.7415
+Epoch 8/10
+110288/110288 [==============================] - 13s 116us/step - loss: 0.8100 - acc: 0.7485 - val_loss: 0.7902 - val_acc: 0.7533
+Epoch 9/10
+110288/110288 [==============================] - 13s 116us/step - loss: 0.7767 - acc: 0.7560 - val_loss: 0.7584 - val_acc: 0.7599
+Epoch 10/10
+110288/110288 [==============================] - 13s 116us/step - loss: 0.7461 - acc: 0.7640 - val_loss: 0.7307 - val_acc: 0.7671
+&lt;PAD&gt; jersey est parfois calme en l&#39; et il est est enneigée enneigée avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+CPU times: user 1min 9s, sys: 1min 2s, total: 2min 11s
+Wall time: 2min 14s
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12192,31 +12533,109 @@ You've turned the words into ids, but there's a better representation of a word.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">embed_model</span><span class="p">(</span><span class="n">input_shape</span><span class="p">,</span> <span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">english_vocab_size</span><span class="p">,</span> <span class="n">french_vocab_size</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Build and train a RNN model using word embedding on x and y</span>
-<span class="sd">    :param input_shape: Tuple of input shape</span>
-<span class="sd">    :param output_sequence_length: Length of output sequence</span>
-<span class="sd">    :param english_vocab_size: Number of unique English words in the dataset</span>
-<span class="sd">    :param french_vocab_size: Number of unique French words in the dataset</span>
-<span class="sd">    :return: Keras model built, but not trained</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># TODO: Implement</span>
-    <span class="k">return</span> <span class="kc">None</span>
-<span class="n">tests</span><span class="o">.</span><span class="n">test_embed_model</span><span class="p">(</span><span class="n">embed_model</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+def embed_model(input_shape, output_sequence_length, english_vocab_size, french_vocab_size):
+    &quot;&quot;&quot;
+    Build and train a RNN model using word embedding on x and y
+    :param input_shape: Tuple of input shape
+    :param output_sequence_length: Length of output sequence
+    :param english_vocab_size: Number of unique English words in the dataset
+    :param french_vocab_size: Number of unique French words in the dataset
+    :return: Keras model built, but not trained
+    &quot;&quot;&quot;
+    # TODO: Implement
+    inputs = Input(shape=input_shape[1:])
+    x = Embedding(input_dim=english_vocab_size, output_dim=128)(inputs)
+    x = GRU(256, return_sequences=True)(x)
+    x = TimeDistributed(Dense(512, activation=&#39;relu&#39;))(x)
+    outputs = Dense(french_vocab_size, activation=&#39;softmax&#39;)(x)
+    model = Model(inputs=inputs, outputs=outputs)
+    model.compile(loss=&#39;sparse_categorical_crossentropy&#39;, metrics=[&#39;accuracy&#39;], optimizer=&#39;adam&#39;)
 
+    return model
 
-<span class="c1"># TODO: Reshape the input</span>
+tests.test_embed_model(embed_model)
 
-<span class="c1"># TODO: Train the neural network</span>
+# TODO: Reshape the input
+tmp_x = pad(preproc_english_sentences, max_french_sequence_length)
+tmp_x = tmp_x.reshape((-1, preproc_french_sentences.shape[-2]))
 
-<span class="c1"># TODO: Print prediction(s)</span>
+# Train the neural network
+embed_rnn_model = embed_model(
+    tmp_x.shape,
+    max_french_sequence_length,
+    english_vocab_size,
+    french_vocab_size)
+print(embed_rnn_model.summary())
+embed_rnn_model.fit(tmp_x, preproc_french_sentences, batch_size=1024, epochs=10, validation_split=0.2)
+
+# Print prediction(s)
+print(logits_to_text(embed_rnn_model.predict(tmp_x[:1])[0], french_tokenizer))
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_25 (InputLayer)        (None, 21)                0         
+_________________________________________________________________
+embedding_15 (Embedding)     (None, 21, 128)           28672     
+_________________________________________________________________
+gru_25 (GRU)                 (None, 21, 256)           295680    
+_________________________________________________________________
+time_distributed_25 (TimeDis (None, 21, 512)           131584    
+_________________________________________________________________
+dense_50 (Dense)             (None, 21, 352)           180576    
+=================================================================
+Total params: 636,512
+Trainable params: 636,512
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 110288 samples, validate on 27573 samples
+Epoch 1/10
+110288/110288 [==============================] - 16s 148us/step - loss: 2.8549 - acc: 0.4650 - val_loss: 1.9820 - val_acc: 0.5382
+Epoch 2/10
+110288/110288 [==============================] - 15s 133us/step - loss: 1.3911 - acc: 0.6521 - val_loss: 1.0246 - val_acc: 0.7342
+Epoch 3/10
+110288/110288 [==============================] - 15s 133us/step - loss: 0.8626 - acc: 0.7640 - val_loss: 0.7252 - val_acc: 0.7910
+Epoch 4/10
+110288/110288 [==============================] - 15s 133us/step - loss: 0.6535 - acc: 0.8072 - val_loss: 0.5893 - val_acc: 0.8211
+Epoch 5/10
+110288/110288 [==============================] - 15s 134us/step - loss: 0.5486 - acc: 0.8308 - val_loss: 0.4998 - val_acc: 0.8443
+Epoch 6/10
+110288/110288 [==============================] - 15s 133us/step - loss: 0.4744 - acc: 0.8503 - val_loss: 0.4478 - val_acc: 0.8571
+Epoch 7/10
+110288/110288 [==============================] - 15s 133us/step - loss: 0.4266 - acc: 0.8633 - val_loss: 0.4044 - val_acc: 0.8690
+Epoch 8/10
+110288/110288 [==============================] - 15s 134us/step - loss: 0.3947 - acc: 0.8716 - val_loss: 0.3788 - val_acc: 0.8773
+Epoch 9/10
+110288/110288 [==============================] - 15s 134us/step - loss: 0.3685 - acc: 0.8792 - val_loss: 0.3518 - val_acc: 0.8850
+Epoch 10/10
+110288/110288 [==============================] - 15s 133us/step - loss: 0.3485 - acc: 0.8848 - val_loss: 0.3376 - val_acc: 0.8888
+&lt;PAD&gt; jersey est parfois calme en cours de l&#39; est est en avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+CPU times: user 1min 19s, sys: 1min 13s, total: 2min 32s
+Wall time: 2min 34s
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12233,27 +12652,108 @@ One restriction of a RNN is that it can't see the future input, only the past.  
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">bd_model</span><span class="p">(</span><span class="n">input_shape</span><span class="p">,</span> <span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">english_vocab_size</span><span class="p">,</span> <span class="n">french_vocab_size</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Build and train a bidirectional RNN model on x and y</span>
-<span class="sd">    :param input_shape: Tuple of input shape</span>
-<span class="sd">    :param output_sequence_length: Length of output sequence</span>
-<span class="sd">    :param english_vocab_size: Number of unique English words in the dataset</span>
-<span class="sd">    :param french_vocab_size: Number of unique French words in the dataset</span>
-<span class="sd">    :return: Keras model built, but not trained</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># TODO: Implement</span>
-    <span class="k">return</span> <span class="kc">None</span>
-<span class="n">tests</span><span class="o">.</span><span class="n">test_bd_model</span><span class="p">(</span><span class="n">bd_model</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+def bd_model(input_shape, output_sequence_length, english_vocab_size, french_vocab_size):
+    &quot;&quot;&quot;
+    Build and train a bidirectional RNN model on x and y
+    :param input_shape: Tuple of input shape
+    :param output_sequence_length: Length of output sequence
+    :param english_vocab_size: Number of unique English words in the dataset
+    :param french_vocab_size: Number of unique French words in the dataset
+    :return: Keras model built, but not trained
+    &quot;&quot;&quot;
+    # TODO: Implement
+
+    inputs = Input(shape=input_shape[1:])
+    x = Bidirectional(GRU(256, return_sequences=True))(inputs)
+    x = TimeDistributed(Dense(512, activation=&#39;relu&#39;))(x)
+    outputs = Dense(french_vocab_size, activation=&#39;softmax&#39;)(x)
+    model = Model(inputs=inputs, outputs=outputs)
+    model.compile(loss=&#39;sparse_categorical_crossentropy&#39;, metrics=[&#39;accuracy&#39;], optimizer=&#39;adam&#39;)
+    
+    return model
+    
+tests.test_bd_model(bd_model)
 
 
-<span class="c1"># TODO: Train and Print prediction(s)</span>
+# TODO: Train and Print prediction(s)
+tmp_x = pad(preproc_english_sentences, max_french_sequence_length)
+tmp_x = tmp_x.reshape((-1, preproc_french_sentences.shape[-2], 1))
+
+# Train the neural network
+bd_rnn_model = bd_model(
+    tmp_x.shape,
+    max_french_sequence_length,
+    english_vocab_size,
+    french_vocab_size)
+print(bd_rnn_model.summary())
+bd_rnn_model.fit(tmp_x, preproc_french_sentences, batch_size=1024, epochs=10, validation_split=0.2)
+
+# Print prediction(s)
+print(logits_to_text(bd_rnn_model.predict(tmp_x[:1])[0], french_tokenizer))
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_27 (InputLayer)        (None, 21, 1)             0         
+_________________________________________________________________
+bidirectional_15 (Bidirectio (None, 21, 512)           396288    
+_________________________________________________________________
+time_distributed_27 (TimeDis (None, 21, 512)           262656    
+_________________________________________________________________
+dense_54 (Dense)             (None, 21, 352)           180576    
+=================================================================
+Total params: 839,520
+Trainable params: 839,520
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 110288 samples, validate on 27573 samples
+Epoch 1/10
+110288/110288 [==============================] - 22s 200us/step - loss: 2.0888 - acc: 0.5580 - val_loss: 1.3861 - val_acc: 0.6339
+Epoch 2/10
+110288/110288 [==============================] - 20s 183us/step - loss: 1.2012 - acc: 0.6659 - val_loss: 1.0594 - val_acc: 0.6902
+Epoch 3/10
+110288/110288 [==============================] - 20s 184us/step - loss: 0.9819 - acc: 0.7069 - val_loss: 0.9114 - val_acc: 0.7225
+Epoch 4/10
+110288/110288 [==============================] - 20s 183us/step - loss: 0.8599 - acc: 0.7344 - val_loss: 0.8146 - val_acc: 0.7442
+Epoch 5/10
+110288/110288 [==============================] - 20s 183us/step - loss: 0.7789 - acc: 0.7543 - val_loss: 0.7474 - val_acc: 0.7612
+Epoch 6/10
+110288/110288 [==============================] - 20s 183us/step - loss: 0.7231 - acc: 0.7686 - val_loss: 0.6967 - val_acc: 0.7756
+Epoch 7/10
+110288/110288 [==============================] - 20s 183us/step - loss: 0.6719 - acc: 0.7825 - val_loss: 0.6583 - val_acc: 0.7849
+Epoch 8/10
+110288/110288 [==============================] - 20s 183us/step - loss: 0.6313 - acc: 0.7939 - val_loss: 0.6258 - val_acc: 0.7940
+Epoch 9/10
+110288/110288 [==============================] - 20s 183us/step - loss: 0.5951 - acc: 0.8041 - val_loss: 0.5767 - val_acc: 0.8125
+Epoch 10/10
+110288/110288 [==============================] - 20s 184us/step - loss: 0.5612 - acc: 0.8153 - val_loss: 0.5734 - val_acc: 0.8091
+&lt;PAD&gt; jersey est parfois calme à cours automne l&#39; est neigeux en avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+CPU times: user 1min 57s, sys: 1min 24s, total: 3min 21s
+Wall time: 3min 29s
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12270,7 +12770,7 @@ One restriction of a RNN is that it can't see the future input, only the past.  
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">encdec_model</span><span class="p">(</span><span class="n">input_shape</span><span class="p">,</span> <span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">english_vocab_size</span><span class="p">,</span> <span class="n">french_vocab_size</span><span class="p">):</span>
@@ -12284,7 +12784,7 @@ One restriction of a RNN is that it can't see the future input, only the past.  
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># OPTIONAL: Implement</span>
     <span class="k">return</span> <span class="kc">None</span>
-<span class="n">tests</span><span class="o">.</span><span class="n">test_encdec_model</span><span class="p">(</span><span class="n">encdec_model</span><span class="p">)</span>
+<span class="c1">#tests.test_encdec_model(encdec_model)</span>
 
 
 <span class="c1"># OPTIONAL: Train and Print prediction(s)</span>
@@ -12306,28 +12806,114 @@ One restriction of a RNN is that it can't see the future input, only the past.  
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">model_final</span><span class="p">(</span><span class="n">input_shape</span><span class="p">,</span> <span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">english_vocab_size</span><span class="p">,</span> <span class="n">french_vocab_size</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Build and train a model that incorporates embedding, encoder-decoder, and bidirectional RNN on x and y</span>
-<span class="sd">    :param input_shape: Tuple of input shape</span>
-<span class="sd">    :param output_sequence_length: Length of output sequence</span>
-<span class="sd">    :param english_vocab_size: Number of unique English words in the dataset</span>
-<span class="sd">    :param french_vocab_size: Number of unique French words in the dataset</span>
-<span class="sd">    :return: Keras model built, but not trained</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># TODO: Implement</span>
-    <span class="k">return</span> <span class="kc">None</span>
-<span class="n">tests</span><span class="o">.</span><span class="n">test_model_final</span><span class="p">(</span><span class="n">model_final</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+def model_final(input_shape, output_sequence_length, english_vocab_size, french_vocab_size):
+    &quot;&quot;&quot;
+    Build and train a model that incorporates embedding, encoder-decoder, and bidirectional RNN on x and y
+    :param input_shape: Tuple of input shape
+    :param output_sequence_length: Length of output sequence
+    :param english_vocab_size: Number of unique English words in the dataset
+    :param french_vocab_size: Number of unique French words in the dataset
+    :return: Keras model built, but not trained
+    &quot;&quot;&quot;
+    # TODO: Implement
+    
+    inputs = Input(shape=input_shape[1:])
+    x = Embedding(input_dim=english_vocab_size, output_dim=128,
+                 input_length=output_sequence_length, input_shape=(input_shape[1], ))(inputs)
+    x = Bidirectional(GRU(256, return_sequences=True))(x)
+    x = TimeDistributed(Dense(512, activation=&#39;relu&#39;))(x)
+    outputs = Dense(french_vocab_size, activation=&#39;softmax&#39;)(x)
+    model = Model(inputs=inputs, outputs=outputs)
+    model.compile(loss=&#39;sparse_categorical_crossentropy&#39;, metrics=[&#39;accuracy&#39;], optimizer=&#39;adam&#39;)
+    
+    return model
 
+tests.test_model_final(model_final)
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Final Model Loaded&#39;</span><span class="p">)</span>
-<span class="c1"># TODO: Train the final model</span>
+print(&#39;Final Model Loaded&#39;)
+# TODO: Train the final model
+
+tmp_x = pad(preproc_english_sentences, max_french_sequence_length)
+tmp_x = tmp_x.reshape((-1, preproc_french_sentences.shape[-2]))
+
+# Train the neural network
+final_model = model_final(
+    tmp_x.shape,
+    max_french_sequence_length,
+    english_vocab_size,
+    french_vocab_size)
+print(final_model.summary())
+final_model.fit(tmp_x, preproc_french_sentences, batch_size=1024, epochs=10, validation_split=0.2)
+
+# Print prediction(s)
+print(logits_to_text(final_model.predict(tmp_x[:1])[0], french_tokenizer))
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Final Model Loaded
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_29 (InputLayer)        (None, 21)                0         
+_________________________________________________________________
+embedding_17 (Embedding)     (None, 21, 128)           28672     
+_________________________________________________________________
+bidirectional_17 (Bidirectio (None, 21, 512)           591360    
+_________________________________________________________________
+time_distributed_29 (TimeDis (None, 21, 512)           262656    
+_________________________________________________________________
+dense_58 (Dense)             (None, 21, 352)           180576    
+=================================================================
+Total params: 1,063,264
+Trainable params: 1,063,264
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 110288 samples, validate on 27573 samples
+Epoch 1/10
+110288/110288 [==============================] - 26s 234us/step - loss: 2.5241 - acc: 0.5145 - val_loss: 1.4200 - val_acc: 0.6505
+Epoch 2/10
+110288/110288 [==============================] - 24s 216us/step - loss: 1.0798 - acc: 0.7228 - val_loss: 0.8443 - val_acc: 0.7746
+Epoch 3/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.7049 - acc: 0.8027 - val_loss: 0.5897 - val_acc: 0.8280
+Epoch 4/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.5101 - acc: 0.8483 - val_loss: 0.4508 - val_acc: 0.8642
+Epoch 5/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.4026 - acc: 0.8772 - val_loss: 0.3680 - val_acc: 0.8854
+Epoch 6/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.3301 - acc: 0.8980 - val_loss: 0.2988 - val_acc: 0.9079
+Epoch 7/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.2769 - acc: 0.9138 - val_loss: 0.2592 - val_acc: 0.9189
+Epoch 8/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.2436 - acc: 0.9234 - val_loss: 0.2387 - val_acc: 0.9240
+Epoch 9/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.2162 - acc: 0.9318 - val_loss: 0.2086 - val_acc: 0.9360
+Epoch 10/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.1952 - acc: 0.9383 - val_loss: 0.1955 - val_acc: 0.9380
+&lt;PAD&gt; jersey est parfois calme au l&#39; de l&#39; automne est neigeux en avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+CPU times: user 2min 13s, sys: 1min 45s, total: 3min 59s
+Wall time: 4min 6s
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12342,43 +12928,94 @@ One restriction of a RNN is that it can't see the future input, only the past.  
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">final_predictions</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x_tk</span><span class="p">,</span> <span class="n">y_tk</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Gets predictions using the final model</span>
-<span class="sd">    :param x: Preprocessed English data</span>
-<span class="sd">    :param y: Preprocessed French data</span>
-<span class="sd">    :param x_tk: English tokenizer</span>
-<span class="sd">    :param y_tk: French tokenizer</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># TODO: Train neural network using model_final</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="kc">None</span>
-
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+def final_predictions(x, y, x_tk, y_tk):
+    &quot;&quot;&quot;
+    Gets predictions using the final model
+    :param x: Preprocessed English data
+    :param y: Preprocessed French data
+    :param x_tk: English tokenizer
+    :param y_tk: French tokenizer
+    &quot;&quot;&quot;
+    # TODO: Train neural network using model_final
     
-    <span class="c1">## DON&#39;T EDIT ANYTHING BELOW THIS LINE</span>
-    <span class="n">y_id_to_word</span> <span class="o">=</span> <span class="p">{</span><span class="n">value</span><span class="p">:</span> <span class="n">key</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">y_tk</span><span class="o">.</span><span class="n">word_index</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
-    <span class="n">y_id_to_word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&lt;PAD&gt;&#39;</span>
+    x = pad(x, y.shape[1])
+    x = tmp_x.reshape((-1, y.shape[-2]))
+    
+    model = model_final(x.shape, y.shape[1], len(x_tk.word_index), len(y_tk.word_index))
+    model.fit(x, y, batch_size=1024, epochs=10, validation_split=0.2)
+    
+    ## DON&#39;T EDIT ANYTHING BELOW THIS LINE
+    y_id_to_word = {value: key for key, value in y_tk.word_index.items()}
+    y_id_to_word[0] = &#39;&lt;PAD&gt;&#39;
 
-    <span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;he saw a old yellow truck&#39;</span>
-    <span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="n">x_tk</span><span class="o">.</span><span class="n">word_index</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
-    <span class="n">sentence</span> <span class="o">=</span> <span class="n">pad_sequences</span><span class="p">([</span><span class="n">sentence</span><span class="p">],</span> <span class="n">maxlen</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;post&#39;</span><span class="p">)</span>
-    <span class="n">sentences</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">sentence</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
-    <span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sentences</span><span class="p">))</span>
+    sentence = &#39;he saw a old yellow truck&#39;
+    sentence = [x_tk.word_index[word] for word in sentence.split()]
+    #sentence = pad_sequences([sentence], maxlen=x.shape[-1], padding=&#39;post&#39;)
+    sentence = pad_sequences([sentence], maxlen=y.shape[1], padding=&#39;post&#39;)
+    sentences = np.array([sentence[0], x[0]])
+    predictions = model.predict(sentences, len(sentences))
 
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sample 1:&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">y_id_to_word</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">predictions</span><span class="p">[</span><span class="mi">0</span><span class="p">]]))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Il a vu un vieux camion jaune&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sample 2:&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">y_id_to_word</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">predictions</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">y_id_to_word</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]]))</span>
+    print(&#39;Sample 1:&#39;)
+    print(&#39; &#39;.join([y_id_to_word[np.argmax(x)] for x in predictions[0]]))
+    print(&#39;Il a vu un vieux camion jaune&#39;)
+    print(&#39;Sample 2:&#39;)
+    print(&#39; &#39;.join([y_id_to_word[np.argmax(x)] for x in predictions[1]]))
+    print(&#39; &#39;.join([y_id_to_word[np.max(x)] for x in y[0]]))
 
-
-<span class="n">final_predictions</span><span class="p">(</span><span class="n">preproc_english_sentences</span><span class="p">,</span> <span class="n">preproc_french_sentences</span><span class="p">,</span> <span class="n">english_tokenizer</span><span class="p">,</span> <span class="n">french_tokenizer</span><span class="p">)</span>
+final_predictions(preproc_english_sentences, preproc_french_sentences, english_tokenizer, french_tokenizer)
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Train on 110288 samples, validate on 27573 samples
+Epoch 1/10
+110288/110288 [==============================] - 26s 234us/step - loss: 2.6150 - acc: 0.4969 - val_loss: 1.6115 - val_acc: 0.6056
+Epoch 2/10
+110288/110288 [==============================] - 24s 215us/step - loss: 1.1618 - acc: 0.7025 - val_loss: 0.8795 - val_acc: 0.7646
+Epoch 3/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.7334 - acc: 0.7966 - val_loss: 0.6141 - val_acc: 0.8226
+Epoch 4/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.5355 - acc: 0.8413 - val_loss: 0.4680 - val_acc: 0.8578
+Epoch 5/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.4221 - acc: 0.8699 - val_loss: 0.3755 - val_acc: 0.8832
+Epoch 6/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.3427 - acc: 0.8928 - val_loss: 0.3139 - val_acc: 0.9012
+Epoch 7/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.2863 - acc: 0.9099 - val_loss: 0.2662 - val_acc: 0.9164
+Epoch 8/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.2515 - acc: 0.9202 - val_loss: 0.2420 - val_acc: 0.9235
+Epoch 9/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.2207 - acc: 0.9299 - val_loss: 0.2179 - val_acc: 0.9309
+Epoch 10/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.1997 - acc: 0.9364 - val_loss: 0.1919 - val_acc: 0.9395
+Sample 1:
+il a vu un vieux camion jaune &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+Il a vu un vieux camion jaune
+Sample 2:
+&lt;PAD&gt; jersey est parfois calme pendant automne automne l&#39; il est il en &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+&lt;PAD&gt; jersey est parfois calme pendant l&#39; automne et il est neigeux en avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+CPU times: user 2min 13s, sys: 1min 43s, total: 3min 56s
+Wall time: 4min 5s
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12430,7 +13067,7 @@ $ python -m nbconvert machine_translation.ipynb</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Save before you run this cell!</span>
@@ -12447,14 +13084,16 @@ $ python -m nbconvert machine_translation.ipynb</code></pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt output_prompt">Out[56]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&#39;[NbConvertApp] Converting notebook machine_translation.ipynb to html&#39;,
- &#39;[NbConvertApp] Writing 305996 bytes to machine_translation.html&#39;]</pre>
+<pre>[&#39;[NbConvertApp] Converting notebook machine_translation-Copy1.ipynb to html&#39;,
+ &#39;[NbConvertApp] Writing 359474 bytes to machine_translation-Copy1.html&#39;,
+ &#39;[NbConvertApp] Converting notebook machine_translation.ipynb to html&#39;,
+ &#39;[NbConvertApp] Writing 326845 bytes to machine_translation.html&#39;]</pre>
 </div>
 
 </div>

@@ -11788,7 +11788,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
@@ -11800,10 +11800,29 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">collections</span>
@@ -11825,24 +11844,6 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Using TensorFlow backend.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -11859,7 +11860,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow.python.client</span> <span class="k">import</span> <span class="n">device_lib</span>
@@ -11885,14 +11886,14 @@ device_type: &#34;CPU&#34;
 memory_limit: 268435456
 locality {
 }
-incarnation: 9265911331494066284
+incarnation: 16091315622794081085
 , name: &#34;/gpu:0&#34;
 device_type: &#34;GPU&#34;
-memory_limit: 357302272
+memory_limit: 312147968
 locality {
   bus_id: 1
 }
-incarnation: 1390881309167956107
+incarnation: 17952868570947370722
 physical_device_desc: &#34;device: 0, name: Tesla K80, pci bus id: 0000:00:04.0&#34;
 ]
 </pre>
@@ -11915,7 +11916,7 @@ physical_device_desc: &#34;device: 0, name: Tesla K80, pci bus id: 0000:00:04.0&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load English data</span>
@@ -11960,7 +11961,7 @@ physical_device_desc: &#34;device: 0, name: Tesla K80, pci bus id: 0000:00:04.0&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">sample_i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
@@ -11996,7 +11997,7 @@ small_vocab_fr Line 2:  les états-unis est généralement froid en juillet , et
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">english_sentences</span><span class="p">)</span>
@@ -12012,7 +12013,7 @@ small_vocab_fr Line 2:  les états-unis est généralement froid en juillet , et
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -12039,7 +12040,7 @@ small_vocab_fr Line 2:  les états-unis est généralement froid en juillet , et
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">english_words_counter</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">([</span><span class="n">word</span> <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">english_sentences</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()])</span>
@@ -12108,7 +12109,7 @@ small_vocab_fr Line 2:  les états-unis est généralement froid en juillet , et
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -12123,7 +12124,10 @@ small_vocab_fr Line 2:  les états-unis est généralement froid en juillet , et
             <span class="bp">self</span><span class="o">.</span><span class="n">word_index</span> <span class="o">=</span> <span class="p">{}</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">tokenized</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">def</span> <span class="nf">texts_to_sequences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sentences</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">tokenized</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">]</span>
+            <span class="n">split_sentences</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">]</span>
+            <span class="c1"># removing punctuation</span>
+            <span class="n">punctuation</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tokenized</span> <span class="o">=</span> <span class="p">[[</span><span class="n">token</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">split</span> <span class="k">if</span> <span class="n">token</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">punctuation</span><span class="p">]</span> <span class="k">for</span> <span class="n">split</span> <span class="ow">in</span> <span class="n">split_sentences</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">word_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_word_index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tokenized</span><span class="p">)</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tokenized</span>
         <span class="k">def</span> <span class="nf">generate_word_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tokenseq</span><span class="p">):</span>
@@ -12168,17 +12172,17 @@ small_vocab_fr Line 2:  les états-unis est généralement froid en juillet , et
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;The&#39;: 0, &#39;quick&#39;: 1, &#39;brown&#39;: 2, &#39;fox&#39;: 3, &#39;jumps&#39;: 4, &#39;over&#39;: 5, &#39;the&#39;: 6, &#39;lazy&#39;: 7, &#39;dog&#39;: 8, &#39;.&#39;: 9, &#39;By&#39;: 10, &#39;Jove&#39;: 11, &#39;,&#39;: 12, &#39;my&#39;: 13, &#39;study&#39;: 14, &#39;of&#39;: 15, &#39;lexicography&#39;: 16, &#39;won&#39;: 17, &#39;a&#39;: 18, &#39;prize&#39;: 19, &#39;This&#39;: 20, &#39;is&#39;: 21, &#39;short&#39;: 22, &#39;sentence&#39;: 23}
+<pre>{&#39;The&#39;: 0, &#39;quick&#39;: 1, &#39;brown&#39;: 2, &#39;fox&#39;: 3, &#39;jumps&#39;: 4, &#39;over&#39;: 5, &#39;the&#39;: 6, &#39;lazy&#39;: 7, &#39;dog&#39;: 8, &#39;By&#39;: 9, &#39;Jove&#39;: 10, &#39;my&#39;: 11, &#39;study&#39;: 12, &#39;of&#39;: 13, &#39;lexicography&#39;: 14, &#39;won&#39;: 15, &#39;a&#39;: 16, &#39;prize&#39;: 17, &#39;This&#39;: 18, &#39;is&#39;: 19, &#39;short&#39;: 20, &#39;sentence&#39;: 21}
 
 Sequence 1 in x
   Input:  The quick brown fox jumps over the lazy dog .
-  Output: [&#39;The&#39;, &#39;quick&#39;, &#39;brown&#39;, &#39;fox&#39;, &#39;jumps&#39;, &#39;over&#39;, &#39;the&#39;, &#39;lazy&#39;, &#39;dog&#39;, &#39;.&#39;]
+  Output: [&#39;The&#39;, &#39;quick&#39;, &#39;brown&#39;, &#39;fox&#39;, &#39;jumps&#39;, &#39;over&#39;, &#39;the&#39;, &#39;lazy&#39;, &#39;dog&#39;]
 Sequence 2 in x
   Input:  By Jove , my quick study of lexicography won a prize .
-  Output: [&#39;By&#39;, &#39;Jove&#39;, &#39;,&#39;, &#39;my&#39;, &#39;quick&#39;, &#39;study&#39;, &#39;of&#39;, &#39;lexicography&#39;, &#39;won&#39;, &#39;a&#39;, &#39;prize&#39;, &#39;.&#39;]
+  Output: [&#39;By&#39;, &#39;Jove&#39;, &#39;my&#39;, &#39;quick&#39;, &#39;study&#39;, &#39;of&#39;, &#39;lexicography&#39;, &#39;won&#39;, &#39;a&#39;, &#39;prize&#39;]
 Sequence 3 in x
   Input:  This is a short sentence .
-  Output: [&#39;This&#39;, &#39;is&#39;, &#39;a&#39;, &#39;short&#39;, &#39;sentence&#39;, &#39;.&#39;]
+  Output: [&#39;This&#39;, &#39;is&#39;, &#39;a&#39;, &#39;short&#39;, &#39;sentence&#39;]
 </pre>
 </div>
 </div>
@@ -12199,7 +12203,7 @@ Sequence 3 in x
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pad</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -12249,15 +12253,14 @@ Sequence 3 in x
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Sequence 1 in x
-  Input:  [&#39;The&#39; &#39;quick&#39; &#39;brown&#39; &#39;fox&#39; &#39;jumps&#39; &#39;over&#39; &#39;the&#39; &#39;lazy&#39; &#39;dog&#39; &#39;.&#39;]
-  Output: [0 1 2 3 4 5 6 7 8 9 0 0]
+  Input:  [&#39;The&#39; &#39;quick&#39; &#39;brown&#39; &#39;fox&#39; &#39;jumps&#39; &#39;over&#39; &#39;the&#39; &#39;lazy&#39; &#39;dog&#39;]
+  Output: [0 1 2 3 4 5 6 7 8 0]
 Sequence 2 in x
-  Input:  [&#39;By&#39; &#39;Jove&#39; &#39;,&#39; &#39;my&#39; &#39;quick&#39; &#39;study&#39; &#39;of&#39; &#39;lexicography&#39; &#39;won&#39; &#39;a&#39; &#39;prize&#39;
- &#39;.&#39;]
-  Output: [10 11 12 13  1 14 15 16 17 18 19  9]
+  Input:  [&#39;By&#39; &#39;Jove&#39; &#39;my&#39; &#39;quick&#39; &#39;study&#39; &#39;of&#39; &#39;lexicography&#39; &#39;won&#39; &#39;a&#39; &#39;prize&#39;]
+  Output: [ 9 10 11  1 12 13 14 15 16 17]
 Sequence 3 in x
-  Input:  [&#39;This&#39; &#39;is&#39; &#39;a&#39; &#39;short&#39; &#39;sentence&#39; &#39;.&#39;]
-  Output: [20 21 18 22 23  9  0  0  0  0  0  0]
+  Input:  [&#39;This&#39; &#39;is&#39; &#39;a&#39; &#39;short&#39; &#39;sentence&#39;]
+  Output: [18 19 16 20 21  0  0  0  0  0]
 </pre>
 </div>
 </div>
@@ -12277,7 +12280,7 @@ Sequence 3 in x
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">preprocess</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -12328,10 +12331,10 @@ Sequence 3 in x
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data Preprocessed
-Max English sentence length: 17
-Max French sentence length: 23
-English vocabulary size: 227
-French vocabulary size: 355
+Max English sentence length: 15
+Max French sentence length: 21
+English vocabulary size: 224
+French vocabulary size: 352
 </pre>
 </div>
 </div>
@@ -12360,7 +12363,7 @@ You will begin by training four relatively simple architectures.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">logits_to_text</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">):</span>
@@ -12413,7 +12416,7 @@ A basic RNN model is a good baseline for sequence data.  In this model, you'll b
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
@@ -12428,11 +12431,11 @@ def simple_model(input_shape, output_sequence_length, english_vocab_size, french
     &quot;&quot;&quot;
     # TODO: Build the layers
     inputs = Input(shape=input_shape[1:])
-    x = GRU(output_sequence_length, return_sequences=True)(inputs)
-    x = TimeDistributed(Dense(500, activation=&#39;relu&#39;))(x)
+    x = GRU(256, return_sequences=True)(inputs)
+    x = TimeDistributed(Dense(512, activation=&#39;relu&#39;))(x)
     outputs = Dense(french_vocab_size, activation=&#39;softmax&#39;)(x)
     model = Model(inputs=inputs, outputs=outputs)
-    model.compile(loss=&#39;sparse_categorical_crossentropy&#39;, optimizer=&#39;adam&#39;)
+    model.compile(loss=&#39;sparse_categorical_crossentropy&#39;, metrics=[&#39;accuracy&#39;], optimizer=&#39;adam&#39;)
 
     return model
 
@@ -12448,6 +12451,7 @@ simple_rnn_model = simple_model(
     max_french_sequence_length,
     english_vocab_size,
     french_vocab_size)
+print(simple_rnn_model.summary())
 simple_rnn_model.fit(tmp_x, preproc_french_sentences, batch_size=1024, epochs=10, validation_split=0.2)
 
 # Print prediction(s)
@@ -12468,30 +12472,46 @@ print(logits_to_text(simple_rnn_model.predict(tmp_x[:1])[0], french_tokenizer))
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 110288 samples, validate on 27573 samples
+<pre>_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_23 (InputLayer)        (None, 21, 1)             0         
+_________________________________________________________________
+gru_23 (GRU)                 (None, 21, 256)           198144    
+_________________________________________________________________
+time_distributed_23 (TimeDis (None, 21, 512)           131584    
+_________________________________________________________________
+dense_46 (Dense)             (None, 21, 352)           180576    
+=================================================================
+Total params: 510,304
+Trainable params: 510,304
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 110288 samples, validate on 27573 samples
 Epoch 1/10
-110288/110288 [==============================] - 11s 99us/step - loss: 3.3190 - val_loss: 2.3562
+110288/110288 [==============================] - 14s 130us/step - loss: 2.4327 - acc: 0.4968 - val_loss: 1.8149 - val_acc: 0.5585
 Epoch 2/10
-110288/110288 [==============================] - 9s 81us/step - loss: 2.2041 - val_loss: 2.0473
+110288/110288 [==============================] - 13s 116us/step - loss: 1.5358 - acc: 0.6074 - val_loss: 1.3003 - val_acc: 0.6566
 Epoch 3/10
-110288/110288 [==============================] - 9s 81us/step - loss: 1.9215 - val_loss: 1.8031
+110288/110288 [==============================] - 13s 116us/step - loss: 1.1936 - acc: 0.6698 - val_loss: 1.1008 - val_acc: 0.6871
 Epoch 4/10
-110288/110288 [==============================] - 9s 81us/step - loss: 1.7262 - val_loss: 1.6485
+110288/110288 [==============================] - 13s 116us/step - loss: 1.0424 - acc: 0.6997 - val_loss: 0.9886 - val_acc: 0.7087
 Epoch 5/10
-110288/110288 [==============================] - 9s 81us/step - loss: 1.5878 - val_loss: 1.5242
+110288/110288 [==============================] - 13s 116us/step - loss: 0.9549 - acc: 0.7164 - val_loss: 0.9330 - val_acc: 0.7188
 Epoch 6/10
-110288/110288 [==============================] - 9s 80us/step - loss: 1.4757 - val_loss: 1.4281
+110288/110288 [==============================] - 13s 116us/step - loss: 0.8952 - acc: 0.7285 - val_loss: 0.8790 - val_acc: 0.7329
 Epoch 7/10
-110288/110288 [==============================] - 9s 80us/step - loss: 1.3967 - val_loss: 1.3646
+110288/110288 [==============================] - 13s 116us/step - loss: 0.8481 - acc: 0.7396 - val_loss: 0.8338 - val_acc: 0.7415
 Epoch 8/10
-110288/110288 [==============================] - 9s 81us/step - loss: 1.3436 - val_loss: 1.3182
+110288/110288 [==============================] - 13s 116us/step - loss: 0.8100 - acc: 0.7485 - val_loss: 0.7902 - val_acc: 0.7533
 Epoch 9/10
-110288/110288 [==============================] - 9s 81us/step - loss: 1.3021 - val_loss: 1.2813
+110288/110288 [==============================] - 13s 116us/step - loss: 0.7767 - acc: 0.7560 - val_loss: 0.7584 - val_acc: 0.7599
 Epoch 10/10
-110288/110288 [==============================] - 9s 81us/step - loss: 1.2685 - val_loss: 1.2509
-&lt;PAD&gt; jersey est parfois calme en , et il il est est est en . &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
-CPU times: user 1min 1s, sys: 37.3 s, total: 1min 38s
-Wall time: 1min 35s
+110288/110288 [==============================] - 13s 116us/step - loss: 0.7461 - acc: 0.7640 - val_loss: 0.7307 - val_acc: 0.7671
+&lt;PAD&gt; jersey est parfois calme en l&#39; et il est est enneigée enneigée avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+CPU times: user 1min 9s, sys: 1min 2s, total: 2min 11s
+Wall time: 2min 14s
 </pre>
 </div>
 </div>
@@ -12513,46 +12533,47 @@ You've turned the words into ids, but there's a better representation of a word.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">embed_model</span><span class="p">(</span><span class="n">input_shape</span><span class="p">,</span> <span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">english_vocab_size</span><span class="p">,</span> <span class="n">french_vocab_size</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Build and train a RNN model using word embedding on x and y</span>
-<span class="sd">    :param input_shape: Tuple of input shape</span>
-<span class="sd">    :param output_sequence_length: Length of output sequence</span>
-<span class="sd">    :param english_vocab_size: Number of unique English words in the dataset</span>
-<span class="sd">    :param french_vocab_size: Number of unique French words in the dataset</span>
-<span class="sd">    :return: Keras model built, but not trained</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># TODO: Implement</span>
-    <span class="n">inputs</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">Embedding</span><span class="p">(</span><span class="n">input_dim</span><span class="o">=</span><span class="n">english_vocab_size</span><span class="p">,</span> <span class="n">output_dim</span><span class="o">=</span><span class="mi">50</span><span class="p">)(</span><span class="n">inputs</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">GRU</span><span class="p">(</span><span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">TimeDistributed</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">outputs</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="n">french_vocab_size</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">)</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;sparse_categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+def embed_model(input_shape, output_sequence_length, english_vocab_size, french_vocab_size):
+    &quot;&quot;&quot;
+    Build and train a RNN model using word embedding on x and y
+    :param input_shape: Tuple of input shape
+    :param output_sequence_length: Length of output sequence
+    :param english_vocab_size: Number of unique English words in the dataset
+    :param french_vocab_size: Number of unique French words in the dataset
+    :return: Keras model built, but not trained
+    &quot;&quot;&quot;
+    # TODO: Implement
+    inputs = Input(shape=input_shape[1:])
+    x = Embedding(input_dim=english_vocab_size, output_dim=128)(inputs)
+    x = GRU(256, return_sequences=True)(x)
+    x = TimeDistributed(Dense(512, activation=&#39;relu&#39;))(x)
+    outputs = Dense(french_vocab_size, activation=&#39;softmax&#39;)(x)
+    model = Model(inputs=inputs, outputs=outputs)
+    model.compile(loss=&#39;sparse_categorical_crossentropy&#39;, metrics=[&#39;accuracy&#39;], optimizer=&#39;adam&#39;)
 
-    <span class="k">return</span> <span class="n">model</span>
+    return model
 
-<span class="n">tests</span><span class="o">.</span><span class="n">test_embed_model</span><span class="p">(</span><span class="n">embed_model</span><span class="p">)</span>
+tests.test_embed_model(embed_model)
 
-<span class="c1"># TODO: Reshape the input</span>
-<span class="n">tmp_x</span> <span class="o">=</span> <span class="n">pad</span><span class="p">(</span><span class="n">preproc_english_sentences</span><span class="p">,</span> <span class="n">max_french_sequence_length</span><span class="p">)</span>
-<span class="c1">#tmp_x = tmp_x.reshape((-1, preproc_french_sentences.shape[-2], 1))</span>
-<span class="n">tmp_x</span> <span class="o">=</span> <span class="n">tmp_x</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">preproc_french_sentences</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]))</span>
+# TODO: Reshape the input
+tmp_x = pad(preproc_english_sentences, max_french_sequence_length)
+tmp_x = tmp_x.reshape((-1, preproc_french_sentences.shape[-2]))
 
-<span class="c1"># Train the neural network</span>
-<span class="n">simple_rnn_model</span> <span class="o">=</span> <span class="n">embed_model</span><span class="p">(</span>
-    <span class="n">tmp_x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span>
-    <span class="n">max_french_sequence_length</span><span class="p">,</span>
-    <span class="n">english_vocab_size</span><span class="p">,</span>
-    <span class="n">french_vocab_size</span><span class="p">)</span>
-<span class="n">simple_rnn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tmp_x</span><span class="p">,</span> <span class="n">preproc_french_sentences</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+# Train the neural network
+embed_rnn_model = embed_model(
+    tmp_x.shape,
+    max_french_sequence_length,
+    english_vocab_size,
+    french_vocab_size)
+print(embed_rnn_model.summary())
+embed_rnn_model.fit(tmp_x, preproc_french_sentences, batch_size=1024, epochs=10, validation_split=0.2)
 
-<span class="c1"># Print prediction(s)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">logits_to_text</span><span class="p">(</span><span class="n">simple_rnn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tmp_x</span><span class="p">[:</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">],</span> <span class="n">french_tokenizer</span><span class="p">))</span>
+# Print prediction(s)
+print(logits_to_text(embed_rnn_model.predict(tmp_x[:1])[0], french_tokenizer))
 </pre></div>
 
 </div>
@@ -12569,28 +12590,48 @@ You've turned the words into ids, but there's a better representation of a word.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 110288 samples, validate on 27573 samples
+<pre>_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_25 (InputLayer)        (None, 21)                0         
+_________________________________________________________________
+embedding_15 (Embedding)     (None, 21, 128)           28672     
+_________________________________________________________________
+gru_25 (GRU)                 (None, 21, 256)           295680    
+_________________________________________________________________
+time_distributed_25 (TimeDis (None, 21, 512)           131584    
+_________________________________________________________________
+dense_50 (Dense)             (None, 21, 352)           180576    
+=================================================================
+Total params: 636,512
+Trainable params: 636,512
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 110288 samples, validate on 27573 samples
 Epoch 1/10
-110288/110288 [==============================] - 12s 111us/step - loss: 3.1722 - val_loss: 2.0581
+110288/110288 [==============================] - 16s 148us/step - loss: 2.8549 - acc: 0.4650 - val_loss: 1.9820 - val_acc: 0.5382
 Epoch 2/10
-110288/110288 [==============================] - 12s 106us/step - loss: 1.6263 - val_loss: 1.3210
+110288/110288 [==============================] - 15s 133us/step - loss: 1.3911 - acc: 0.6521 - val_loss: 1.0246 - val_acc: 0.7342
 Epoch 3/10
-110288/110288 [==============================] - 12s 106us/step - loss: 1.1778 - val_loss: 1.0499
+110288/110288 [==============================] - 15s 133us/step - loss: 0.8626 - acc: 0.7640 - val_loss: 0.7252 - val_acc: 0.7910
 Epoch 4/10
-110288/110288 [==============================] - 12s 106us/step - loss: 0.9458 - val_loss: 0.8345
+110288/110288 [==============================] - 15s 133us/step - loss: 0.6535 - acc: 0.8072 - val_loss: 0.5893 - val_acc: 0.8211
 Epoch 5/10
-110288/110288 [==============================] - 12s 106us/step - loss: 0.7727 - val_loss: 0.7171
+110288/110288 [==============================] - 15s 134us/step - loss: 0.5486 - acc: 0.8308 - val_loss: 0.4998 - val_acc: 0.8443
 Epoch 6/10
-110288/110288 [==============================] - 12s 106us/step - loss: 0.6819 - val_loss: 0.6459
+110288/110288 [==============================] - 15s 133us/step - loss: 0.4744 - acc: 0.8503 - val_loss: 0.4478 - val_acc: 0.8571
 Epoch 7/10
-110288/110288 [==============================] - 12s 106us/step - loss: 0.6238 - val_loss: 0.6003
+110288/110288 [==============================] - 15s 133us/step - loss: 0.4266 - acc: 0.8633 - val_loss: 0.4044 - val_acc: 0.8690
 Epoch 8/10
-110288/110288 [==============================] - 12s 106us/step - loss: 0.5830 - val_loss: 0.5641
+110288/110288 [==============================] - 15s 134us/step - loss: 0.3947 - acc: 0.8716 - val_loss: 0.3788 - val_acc: 0.8773
 Epoch 9/10
-110288/110288 [==============================] - 12s 106us/step - loss: 0.5537 - val_loss: 0.5393
+110288/110288 [==============================] - 15s 134us/step - loss: 0.3685 - acc: 0.8792 - val_loss: 0.3518 - val_acc: 0.8850
 Epoch 10/10
-110288/110288 [==============================] - 12s 106us/step - loss: 0.5284 - val_loss: 0.5168
-&lt;PAD&gt; jersey est parfois calme en l&#39; , et il est neigeux en avril . . &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+110288/110288 [==============================] - 15s 133us/step - loss: 0.3485 - acc: 0.8848 - val_loss: 0.3376 - val_acc: 0.8888
+&lt;PAD&gt; jersey est parfois calme en cours de l&#39; est est en avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+CPU times: user 1min 19s, sys: 1min 13s, total: 2min 32s
+Wall time: 2min 34s
 </pre>
 </div>
 </div>
@@ -12611,47 +12652,48 @@ One restriction of a RNN is that it can't see the future input, only the past.  
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">bd_model</span><span class="p">(</span><span class="n">input_shape</span><span class="p">,</span> <span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">english_vocab_size</span><span class="p">,</span> <span class="n">french_vocab_size</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Build and train a bidirectional RNN model on x and y</span>
-<span class="sd">    :param input_shape: Tuple of input shape</span>
-<span class="sd">    :param output_sequence_length: Length of output sequence</span>
-<span class="sd">    :param english_vocab_size: Number of unique English words in the dataset</span>
-<span class="sd">    :param french_vocab_size: Number of unique French words in the dataset</span>
-<span class="sd">    :return: Keras model built, but not trained</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># TODO: Implement</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+def bd_model(input_shape, output_sequence_length, english_vocab_size, french_vocab_size):
+    &quot;&quot;&quot;
+    Build and train a bidirectional RNN model on x and y
+    :param input_shape: Tuple of input shape
+    :param output_sequence_length: Length of output sequence
+    :param english_vocab_size: Number of unique English words in the dataset
+    :param french_vocab_size: Number of unique French words in the dataset
+    :return: Keras model built, but not trained
+    &quot;&quot;&quot;
+    # TODO: Implement
 
-    <span class="n">inputs</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-    <span class="c1">#x = Embedding(input_dim=english_vocab_size, output_dim=100)(inputs)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">Bidirectional</span><span class="p">(</span><span class="n">GRU</span><span class="p">(</span><span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">))(</span><span class="n">inputs</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">TimeDistributed</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">outputs</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="n">french_vocab_size</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">)</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;sparse_categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">model</span>
+    inputs = Input(shape=input_shape[1:])
+    x = Bidirectional(GRU(256, return_sequences=True))(inputs)
+    x = TimeDistributed(Dense(512, activation=&#39;relu&#39;))(x)
+    outputs = Dense(french_vocab_size, activation=&#39;softmax&#39;)(x)
+    model = Model(inputs=inputs, outputs=outputs)
+    model.compile(loss=&#39;sparse_categorical_crossentropy&#39;, metrics=[&#39;accuracy&#39;], optimizer=&#39;adam&#39;)
     
-<span class="n">tests</span><span class="o">.</span><span class="n">test_bd_model</span><span class="p">(</span><span class="n">bd_model</span><span class="p">)</span>
+    return model
+    
+tests.test_bd_model(bd_model)
 
 
-<span class="c1"># TODO: Train and Print prediction(s)</span>
-<span class="n">tmp_x</span> <span class="o">=</span> <span class="n">pad</span><span class="p">(</span><span class="n">preproc_english_sentences</span><span class="p">,</span> <span class="n">max_french_sequence_length</span><span class="p">)</span>
-<span class="n">tmp_x</span> <span class="o">=</span> <span class="n">tmp_x</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">preproc_french_sentences</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span>
+# TODO: Train and Print prediction(s)
+tmp_x = pad(preproc_english_sentences, max_french_sequence_length)
+tmp_x = tmp_x.reshape((-1, preproc_french_sentences.shape[-2], 1))
 
-<span class="c1"># Train the neural network</span>
-<span class="n">simple_rnn_model</span> <span class="o">=</span> <span class="n">bd_model</span><span class="p">(</span>
-    <span class="n">tmp_x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span>
-    <span class="n">max_french_sequence_length</span><span class="p">,</span>
-    <span class="n">english_vocab_size</span><span class="p">,</span>
-    <span class="n">french_vocab_size</span><span class="p">)</span>
-<span class="n">simple_rnn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tmp_x</span><span class="p">,</span> <span class="n">preproc_french_sentences</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+# Train the neural network
+bd_rnn_model = bd_model(
+    tmp_x.shape,
+    max_french_sequence_length,
+    english_vocab_size,
+    french_vocab_size)
+print(bd_rnn_model.summary())
+bd_rnn_model.fit(tmp_x, preproc_french_sentences, batch_size=1024, epochs=10, validation_split=0.2)
 
-<span class="c1"># Print prediction(s)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">logits_to_text</span><span class="p">(</span><span class="n">simple_rnn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tmp_x</span><span class="p">[:</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">],</span> <span class="n">french_tokenizer</span><span class="p">))</span>
+# Print prediction(s)
+print(logits_to_text(bd_rnn_model.predict(tmp_x[:1])[0], french_tokenizer))
 </pre></div>
 
 </div>
@@ -12668,28 +12710,46 @@ One restriction of a RNN is that it can't see the future input, only the past.  
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 110288 samples, validate on 27573 samples
+<pre>_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_27 (InputLayer)        (None, 21, 1)             0         
+_________________________________________________________________
+bidirectional_15 (Bidirectio (None, 21, 512)           396288    
+_________________________________________________________________
+time_distributed_27 (TimeDis (None, 21, 512)           262656    
+_________________________________________________________________
+dense_54 (Dense)             (None, 21, 352)           180576    
+=================================================================
+Total params: 839,520
+Trainable params: 839,520
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 110288 samples, validate on 27573 samples
 Epoch 1/10
-110288/110288 [==============================] - 15s 133us/step - loss: 2.9674 - val_loss: 2.0375
+110288/110288 [==============================] - 22s 200us/step - loss: 2.0888 - acc: 0.5580 - val_loss: 1.3861 - val_acc: 0.6339
 Epoch 2/10
-110288/110288 [==============================] - 14s 127us/step - loss: 1.7699 - val_loss: 1.5812
+110288/110288 [==============================] - 20s 183us/step - loss: 1.2012 - acc: 0.6659 - val_loss: 1.0594 - val_acc: 0.6902
 Epoch 3/10
-110288/110288 [==============================] - 14s 128us/step - loss: 1.4783 - val_loss: 1.3904
+110288/110288 [==============================] - 20s 184us/step - loss: 0.9819 - acc: 0.7069 - val_loss: 0.9114 - val_acc: 0.7225
 Epoch 4/10
-110288/110288 [==============================] - 14s 128us/step - loss: 1.3351 - val_loss: 1.2788
+110288/110288 [==============================] - 20s 183us/step - loss: 0.8599 - acc: 0.7344 - val_loss: 0.8146 - val_acc: 0.7442
 Epoch 5/10
-110288/110288 [==============================] - 14s 129us/step - loss: 1.2431 - val_loss: 1.2027
+110288/110288 [==============================] - 20s 183us/step - loss: 0.7789 - acc: 0.7543 - val_loss: 0.7474 - val_acc: 0.7612
 Epoch 6/10
-110288/110288 [==============================] - 14s 129us/step - loss: 1.1754 - val_loss: 1.1434
+110288/110288 [==============================] - 20s 183us/step - loss: 0.7231 - acc: 0.7686 - val_loss: 0.6967 - val_acc: 0.7756
 Epoch 7/10
-110288/110288 [==============================] - 14s 129us/step - loss: 1.1213 - val_loss: 1.0938
+110288/110288 [==============================] - 20s 183us/step - loss: 0.6719 - acc: 0.7825 - val_loss: 0.6583 - val_acc: 0.7849
 Epoch 8/10
-110288/110288 [==============================] - 14s 128us/step - loss: 1.0762 - val_loss: 1.0536
+110288/110288 [==============================] - 20s 183us/step - loss: 0.6313 - acc: 0.7939 - val_loss: 0.6258 - val_acc: 0.7940
 Epoch 9/10
-110288/110288 [==============================] - 14s 128us/step - loss: 1.0398 - val_loss: 1.0209
+110288/110288 [==============================] - 20s 183us/step - loss: 0.5951 - acc: 0.8041 - val_loss: 0.5767 - val_acc: 0.8125
 Epoch 10/10
-110288/110288 [==============================] - 14s 128us/step - loss: 1.0092 - val_loss: 0.9942
-&lt;PAD&gt; jersey est parfois calme calme automne , et il est enneigée en en . &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+110288/110288 [==============================] - 20s 184us/step - loss: 0.5612 - acc: 0.8153 - val_loss: 0.5734 - val_acc: 0.8091
+&lt;PAD&gt; jersey est parfois calme à cours automne l&#39; est neigeux en avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+CPU times: user 1min 57s, sys: 1min 24s, total: 3min 21s
+Wall time: 3min 29s
 </pre>
 </div>
 </div>
@@ -12710,7 +12770,7 @@ Epoch 10/10
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">encdec_model</span><span class="p">(</span><span class="n">input_shape</span><span class="p">,</span> <span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">english_vocab_size</span><span class="p">,</span> <span class="n">french_vocab_size</span><span class="p">):</span>
@@ -12746,49 +12806,51 @@ Epoch 10/10
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">model_final</span><span class="p">(</span><span class="n">input_shape</span><span class="p">,</span> <span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">english_vocab_size</span><span class="p">,</span> <span class="n">french_vocab_size</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Build and train a model that incorporates embedding, encoder-decoder, and bidirectional RNN on x and y</span>
-<span class="sd">    :param input_shape: Tuple of input shape</span>
-<span class="sd">    :param output_sequence_length: Length of output sequence</span>
-<span class="sd">    :param english_vocab_size: Number of unique English words in the dataset</span>
-<span class="sd">    :param french_vocab_size: Number of unique French words in the dataset</span>
-<span class="sd">    :return: Keras model built, but not trained</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># TODO: Implement</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+def model_final(input_shape, output_sequence_length, english_vocab_size, french_vocab_size):
+    &quot;&quot;&quot;
+    Build and train a model that incorporates embedding, encoder-decoder, and bidirectional RNN on x and y
+    :param input_shape: Tuple of input shape
+    :param output_sequence_length: Length of output sequence
+    :param english_vocab_size: Number of unique English words in the dataset
+    :param french_vocab_size: Number of unique French words in the dataset
+    :return: Keras model built, but not trained
+    &quot;&quot;&quot;
+    # TODO: Implement
     
-    <span class="n">inputs</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">Embedding</span><span class="p">(</span><span class="n">input_dim</span><span class="o">=</span><span class="n">english_vocab_size</span><span class="p">,</span> <span class="n">output_dim</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-                 <span class="n">input_length</span><span class="o">=</span><span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">input_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">))(</span><span class="n">inputs</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">Bidirectional</span><span class="p">(</span><span class="n">GRU</span><span class="p">(</span><span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">))(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">TimeDistributed</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">outputs</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="n">french_vocab_size</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">)</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;sparse_categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">)</span>
+    inputs = Input(shape=input_shape[1:])
+    x = Embedding(input_dim=english_vocab_size, output_dim=128,
+                 input_length=output_sequence_length, input_shape=(input_shape[1], ))(inputs)
+    x = Bidirectional(GRU(256, return_sequences=True))(x)
+    x = TimeDistributed(Dense(512, activation=&#39;relu&#39;))(x)
+    outputs = Dense(french_vocab_size, activation=&#39;softmax&#39;)(x)
+    model = Model(inputs=inputs, outputs=outputs)
+    model.compile(loss=&#39;sparse_categorical_crossentropy&#39;, metrics=[&#39;accuracy&#39;], optimizer=&#39;adam&#39;)
     
-    <span class="k">return</span> <span class="n">model</span>
+    return model
 
-<span class="n">tests</span><span class="o">.</span><span class="n">test_model_final</span><span class="p">(</span><span class="n">model_final</span><span class="p">)</span>
+tests.test_model_final(model_final)
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Final Model Loaded&#39;</span><span class="p">)</span>
-<span class="c1"># TODO: Train the final model</span>
+print(&#39;Final Model Loaded&#39;)
+# TODO: Train the final model
 
-<span class="n">tmp_x</span> <span class="o">=</span> <span class="n">pad</span><span class="p">(</span><span class="n">preproc_english_sentences</span><span class="p">,</span> <span class="n">max_french_sequence_length</span><span class="p">)</span>
-<span class="n">tmp_x</span> <span class="o">=</span> <span class="n">tmp_x</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">preproc_french_sentences</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]))</span>
+tmp_x = pad(preproc_english_sentences, max_french_sequence_length)
+tmp_x = tmp_x.reshape((-1, preproc_french_sentences.shape[-2]))
 
-<span class="c1"># Train the neural network</span>
-<span class="n">simple_rnn_model</span> <span class="o">=</span> <span class="n">model_final</span><span class="p">(</span>
-    <span class="n">tmp_x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span>
-    <span class="n">max_french_sequence_length</span><span class="p">,</span>
-    <span class="n">english_vocab_size</span><span class="p">,</span>
-    <span class="n">french_vocab_size</span><span class="p">)</span>
-<span class="n">simple_rnn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tmp_x</span><span class="p">,</span> <span class="n">preproc_french_sentences</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+# Train the neural network
+final_model = model_final(
+    tmp_x.shape,
+    max_french_sequence_length,
+    english_vocab_size,
+    french_vocab_size)
+print(final_model.summary())
+final_model.fit(tmp_x, preproc_french_sentences, batch_size=1024, epochs=10, validation_split=0.2)
 
-<span class="c1"># Print prediction(s)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">logits_to_text</span><span class="p">(</span><span class="n">simple_rnn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tmp_x</span><span class="p">[:</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">],</span> <span class="n">french_tokenizer</span><span class="p">))</span>
+# Print prediction(s)
+print(logits_to_text(final_model.predict(tmp_x[:1])[0], french_tokenizer))
 </pre></div>
 
 </div>
@@ -12806,28 +12868,48 @@ Epoch 10/10
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Final Model Loaded
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_29 (InputLayer)        (None, 21)                0         
+_________________________________________________________________
+embedding_17 (Embedding)     (None, 21, 128)           28672     
+_________________________________________________________________
+bidirectional_17 (Bidirectio (None, 21, 512)           591360    
+_________________________________________________________________
+time_distributed_29 (TimeDis (None, 21, 512)           262656    
+_________________________________________________________________
+dense_58 (Dense)             (None, 21, 352)           180576    
+=================================================================
+Total params: 1,063,264
+Trainable params: 1,063,264
+Non-trainable params: 0
+_________________________________________________________________
+None
 Train on 110288 samples, validate on 27573 samples
 Epoch 1/10
-110288/110288 [==============================] - 17s 152us/step - loss: 3.0371 - val_loss: 1.8039
+110288/110288 [==============================] - 26s 234us/step - loss: 2.5241 - acc: 0.5145 - val_loss: 1.4200 - val_acc: 0.6505
 Epoch 2/10
-110288/110288 [==============================] - 16s 144us/step - loss: 1.4612 - val_loss: 1.2191
+110288/110288 [==============================] - 24s 216us/step - loss: 1.0798 - acc: 0.7228 - val_loss: 0.8443 - val_acc: 0.7746
 Epoch 3/10
-110288/110288 [==============================] - 16s 145us/step - loss: 1.0766 - val_loss: 0.9213
+110288/110288 [==============================] - 24s 216us/step - loss: 0.7049 - acc: 0.8027 - val_loss: 0.5897 - val_acc: 0.8280
 Epoch 4/10
-110288/110288 [==============================] - 16s 145us/step - loss: 0.8077 - val_loss: 0.7134
+110288/110288 [==============================] - 24s 216us/step - loss: 0.5101 - acc: 0.8483 - val_loss: 0.4508 - val_acc: 0.8642
 Epoch 5/10
-110288/110288 [==============================] - 16s 145us/step - loss: 0.6618 - val_loss: 0.6112
+110288/110288 [==============================] - 24s 216us/step - loss: 0.4026 - acc: 0.8772 - val_loss: 0.3680 - val_acc: 0.8854
 Epoch 6/10
-110288/110288 [==============================] - 16s 145us/step - loss: 0.5796 - val_loss: 0.5480
+110288/110288 [==============================] - 24s 216us/step - loss: 0.3301 - acc: 0.8980 - val_loss: 0.2988 - val_acc: 0.9079
 Epoch 7/10
-110288/110288 [==============================] - 16s 145us/step - loss: 0.5211 - val_loss: 0.4959
+110288/110288 [==============================] - 24s 216us/step - loss: 0.2769 - acc: 0.9138 - val_loss: 0.2592 - val_acc: 0.9189
 Epoch 8/10
-110288/110288 [==============================] - 16s 145us/step - loss: 0.4754 - val_loss: 0.4573
+110288/110288 [==============================] - 24s 216us/step - loss: 0.2436 - acc: 0.9234 - val_loss: 0.2387 - val_acc: 0.9240
 Epoch 9/10
-110288/110288 [==============================] - 16s 145us/step - loss: 0.4403 - val_loss: 0.4253
+110288/110288 [==============================] - 24s 216us/step - loss: 0.2162 - acc: 0.9318 - val_loss: 0.2086 - val_acc: 0.9360
 Epoch 10/10
-110288/110288 [==============================] - 16s 145us/step - loss: 0.4117 - val_loss: 0.4004
-&lt;PAD&gt; jersey est parfois calme à l&#39;automne , et il est neigeux en avril . . &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+110288/110288 [==============================] - 24s 216us/step - loss: 0.1952 - acc: 0.9383 - val_loss: 0.1955 - val_acc: 0.9380
+&lt;PAD&gt; jersey est parfois calme au l&#39; de l&#39; automne est neigeux en avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+CPU times: user 2min 13s, sys: 1min 45s, total: 3min 59s
+Wall time: 4min 6s
 </pre>
 </div>
 </div>
@@ -12846,44 +12928,45 @@ Epoch 10/10
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">final_predictions</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x_tk</span><span class="p">,</span> <span class="n">y_tk</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Gets predictions using the final model</span>
-<span class="sd">    :param x: Preprocessed English data</span>
-<span class="sd">    :param y: Preprocessed French data</span>
-<span class="sd">    :param x_tk: English tokenizer</span>
-<span class="sd">    :param y_tk: French tokenizer</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># TODO: Train neural network using model_final</span>
-    <span class="c1">#print(x.shape, y.shape[1], english_vocab_size, french_vocab_size)</span>
-    <span class="c1">#model = model_final(tmp_x.shape, y.shape[1], english_vocab_size, french_vocab_size)]</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">model_final</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_tk</span><span class="o">.</span><span class="n">word_index</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_tk</span><span class="o">.</span><span class="n">word_index</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+def final_predictions(x, y, x_tk, y_tk):
+    &quot;&quot;&quot;
+    Gets predictions using the final model
+    :param x: Preprocessed English data
+    :param y: Preprocessed French data
+    :param x_tk: English tokenizer
+    :param y_tk: French tokenizer
+    &quot;&quot;&quot;
+    # TODO: Train neural network using model_final
     
-    <span class="c1">## DON&#39;T EDIT ANYTHING BELOW THIS LINE</span>
-    <span class="n">y_id_to_word</span> <span class="o">=</span> <span class="p">{</span><span class="n">value</span><span class="p">:</span> <span class="n">key</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">y_tk</span><span class="o">.</span><span class="n">word_index</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
-    <span class="n">y_id_to_word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&lt;PAD&gt;&#39;</span>
+    x = pad(x, y.shape[1])
+    x = tmp_x.reshape((-1, y.shape[-2]))
+    
+    model = model_final(x.shape, y.shape[1], len(x_tk.word_index), len(y_tk.word_index))
+    model.fit(x, y, batch_size=1024, epochs=10, validation_split=0.2)
+    
+    ## DON&#39;T EDIT ANYTHING BELOW THIS LINE
+    y_id_to_word = {value: key for key, value in y_tk.word_index.items()}
+    y_id_to_word[0] = &#39;&lt;PAD&gt;&#39;
 
-    <span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;he saw a old yellow truck&#39;</span>
-    <span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="n">x_tk</span><span class="o">.</span><span class="n">word_index</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
-    <span class="n">sentence</span> <span class="o">=</span> <span class="n">pad_sequences</span><span class="p">([</span><span class="n">sentence</span><span class="p">],</span> <span class="n">maxlen</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;post&#39;</span><span class="p">)</span>
-    <span class="n">sentences</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">sentence</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
-    <span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sentences</span><span class="p">))</span>
+    sentence = &#39;he saw a old yellow truck&#39;
+    sentence = [x_tk.word_index[word] for word in sentence.split()]
+    #sentence = pad_sequences([sentence], maxlen=x.shape[-1], padding=&#39;post&#39;)
+    sentence = pad_sequences([sentence], maxlen=y.shape[1], padding=&#39;post&#39;)
+    sentences = np.array([sentence[0], x[0]])
+    predictions = model.predict(sentences, len(sentences))
 
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sample 1:&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">y_id_to_word</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">predictions</span><span class="p">[</span><span class="mi">0</span><span class="p">]]))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Il a vu un vieux camion jaune&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sample 2:&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">y_id_to_word</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">predictions</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">y_id_to_word</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]]))</span>
+    print(&#39;Sample 1:&#39;)
+    print(&#39; &#39;.join([y_id_to_word[np.argmax(x)] for x in predictions[0]]))
+    print(&#39;Il a vu un vieux camion jaune&#39;)
+    print(&#39;Sample 2:&#39;)
+    print(&#39; &#39;.join([y_id_to_word[np.argmax(x)] for x in predictions[1]]))
+    print(&#39; &#39;.join([y_id_to_word[np.max(x)] for x in y[0]]))
 
-
-<span class="n">final_predictions</span><span class="p">(</span><span class="n">preproc_english_sentences</span><span class="p">,</span> <span class="n">preproc_french_sentences</span><span class="p">,</span> <span class="n">english_tokenizer</span><span class="p">,</span> <span class="n">french_tokenizer</span><span class="p">)</span>
+final_predictions(preproc_english_sentences, preproc_french_sentences, english_tokenizer, french_tokenizer)
 </pre></div>
 
 </div>
@@ -12900,197 +12983,35 @@ Epoch 10/10
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-input_17 (InputLayer)        (None, 17)                0         
-_________________________________________________________________
-embedding_13 (Embedding)     (None, 23, 50)            11350     
-_________________________________________________________________
-bidirectional_13 (Bidirectio (None, 23, 46)            10212     
-_________________________________________________________________
-time_distributed_17 (TimeDis (None, 23, 1000)          47000     
-_________________________________________________________________
-dense_34 (Dense)             (None, 23, 355)           355355    
-=================================================================
-Total params: 423,917
-Trainable params: 423,917
-Non-trainable params: 0
-_________________________________________________________________
-None
-(137861, 17)
-Train on 110288 samples, validate on 27573 samples
+<pre>Train on 110288 samples, validate on 27573 samples
 Epoch 1/10
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">InvalidArgumentError</span>                      Traceback (most recent call last)
-<span class="ansi-green-fg">/opt/conda/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">_do_call</span><span class="ansi-blue-fg">(self, fn, *args)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1326</span>     <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1327</span><span class="ansi-red-fg">       </span><span class="ansi-green-fg">return</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1328</span>     <span class="ansi-green-fg">except</span> errors<span class="ansi-blue-fg">.</span>OpError <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/opt/conda/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">_run_fn</span><span class="ansi-blue-fg">(session, feed_dict, fetch_list, target_list, options, run_metadata)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1305</span>                                    feed_dict<span class="ansi-blue-fg">,</span> fetch_list<span class="ansi-blue-fg">,</span> target_list<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">-&gt; 1306</span><span class="ansi-red-fg">                                    status, run_metadata)
-</span><span class="ansi-green-intense-fg ansi-bold">   1307</span> 
-
-<span class="ansi-green-fg">/opt/conda/lib/python3.6/contextlib.py</span> in <span class="ansi-cyan-fg">__exit__</span><span class="ansi-blue-fg">(self, type, value, traceback)</span>
-<span class="ansi-green-intense-fg ansi-bold">     87</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 88</span><span class="ansi-red-fg">                 </span>next<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>gen<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     89</span>             <span class="ansi-green-fg">except</span> StopIteration<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/errors_impl.py</span> in <span class="ansi-cyan-fg">raise_exception_on_not_ok_status</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">    465</span>           compat<span class="ansi-blue-fg">.</span>as_text<span class="ansi-blue-fg">(</span>pywrap_tensorflow<span class="ansi-blue-fg">.</span>TF_Message<span class="ansi-blue-fg">(</span>status<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 466</span><span class="ansi-red-fg">           pywrap_tensorflow.TF_GetCode(status))
-</span><span class="ansi-green-intense-fg ansi-bold">    467</span>   <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">InvalidArgumentError</span>: Input to reshape is a tensor with 17408000 values, but the requested shape requires a multiple of 23000
-	 [[Node: time_distributed_17/Reshape_1 = Reshape[T=DT_FLOAT, Tshape=DT_INT32, _device=&#34;/job:localhost/replica:0/task:0/gpu:0&#34;](time_distributed_17/Relu, time_distributed_17/Reshape_1/shape)]]
-	 [[Node: loss_16/mul/_1309 = _Recv[client_terminated=false, recv_device=&#34;/job:localhost/replica:0/task:0/cpu:0&#34;, send_device=&#34;/job:localhost/replica:0/task:0/gpu:0&#34;, send_device_incarnation=1, tensor_name=&#34;edge_3364_loss_16/mul&#34;, tensor_type=DT_FLOAT, _device=&#34;/job:localhost/replica:0/task:0/cpu:0&#34;]()]]
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-fg">InvalidArgumentError</span>                      Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-35-6ed38bba0e1c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     33</span> 
-<span class="ansi-green-intense-fg ansi-bold">     34</span> 
-<span class="ansi-green-fg">---&gt; 35</span><span class="ansi-red-fg"> </span>final_predictions<span class="ansi-blue-fg">(</span>preproc_english_sentences<span class="ansi-blue-fg">,</span> preproc_french_sentences<span class="ansi-blue-fg">,</span> english_tokenizer<span class="ansi-blue-fg">,</span> french_tokenizer<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">&lt;ipython-input-35-6ed38bba0e1c&gt;</span> in <span class="ansi-cyan-fg">final_predictions</span><span class="ansi-blue-fg">(x, y, x_tk, y_tk)</span>
-<span class="ansi-green-intense-fg ansi-bold">     13</span>     print<span class="ansi-blue-fg">(</span>model<span class="ansi-blue-fg">.</span>summary<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     14</span>     print<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">.</span>shape<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 15</span><span class="ansi-red-fg">     </span>model<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">,</span> batch_size<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1024</span><span class="ansi-blue-fg">,</span> epochs<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">,</span> validation_split<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0.2</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     16</span> 
-<span class="ansi-green-intense-fg ansi-bold">     17</span>     <span class="ansi-red-fg">## DON&#39;T EDIT ANYTHING BELOW THIS LINE</span>
-
-<span class="ansi-green-fg">/opt/conda/lib/python3.6/site-packages/keras/engine/training.py</span> in <span class="ansi-cyan-fg">fit</span><span class="ansi-blue-fg">(self, x, y, batch_size, epochs, verbose, callbacks, validation_split, validation_data, shuffle, class_weight, sample_weight, initial_epoch, steps_per_epoch, validation_steps, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1629</span>                               initial_epoch<span class="ansi-blue-fg">=</span>initial_epoch<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">   1630</span>                               steps_per_epoch<span class="ansi-blue-fg">=</span>steps_per_epoch<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">-&gt; 1631</span><span class="ansi-red-fg">                               validation_steps=validation_steps)
-</span><span class="ansi-green-intense-fg ansi-bold">   1632</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1633</span>     def evaluate(self, x=None, y=None,
-
-<span class="ansi-green-fg">/opt/conda/lib/python3.6/site-packages/keras/engine/training.py</span> in <span class="ansi-cyan-fg">_fit_loop</span><span class="ansi-blue-fg">(self, f, ins, out_labels, batch_size, epochs, verbose, callbacks, val_f, val_ins, shuffle, callback_metrics, initial_epoch, steps_per_epoch, validation_steps)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1211</span>                     batch_logs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;size&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> len<span class="ansi-blue-fg">(</span>batch_ids<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1212</span>                     callbacks<span class="ansi-blue-fg">.</span>on_batch_begin<span class="ansi-blue-fg">(</span>batch_index<span class="ansi-blue-fg">,</span> batch_logs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 1213</span><span class="ansi-red-fg">                     </span>outs <span class="ansi-blue-fg">=</span> f<span class="ansi-blue-fg">(</span>ins_batch<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1214</span>                     <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> isinstance<span class="ansi-blue-fg">(</span>outs<span class="ansi-blue-fg">,</span> list<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1215</span>                         outs <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>outs<span class="ansi-blue-fg">]</span>
-
-<span class="ansi-green-fg">/opt/conda/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, inputs)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2330</span>         updated = session.run(self.outputs + [self.updates_op],
-<span class="ansi-green-intense-fg ansi-bold">   2331</span>                               feed_dict<span class="ansi-blue-fg">=</span>feed_dict<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">-&gt; 2332</span><span class="ansi-red-fg">                               **self.session_kwargs)
-</span><span class="ansi-green-intense-fg ansi-bold">   2333</span>         <span class="ansi-green-fg">return</span> updated<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span>len<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>outputs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">   2334</span> 
-
-<span class="ansi-green-fg">/opt/conda/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, fetches, feed_dict, options, run_metadata)</span>
-<span class="ansi-green-intense-fg ansi-bold">    893</span>     <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    894</span>       result = self._run(None, fetches, feed_dict, options_ptr,
-<span class="ansi-green-fg">--&gt; 895</span><span class="ansi-red-fg">                          run_metadata_ptr)
-</span><span class="ansi-green-intense-fg ansi-bold">    896</span>       <span class="ansi-green-fg">if</span> run_metadata<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    897</span>         proto_data <span class="ansi-blue-fg">=</span> tf_session<span class="ansi-blue-fg">.</span>TF_GetBuffer<span class="ansi-blue-fg">(</span>run_metadata_ptr<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/opt/conda/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">_run</span><span class="ansi-blue-fg">(self, handle, fetches, feed_dict, options, run_metadata)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1122</span>     <span class="ansi-green-fg">if</span> final_fetches <span class="ansi-green-fg">or</span> final_targets <span class="ansi-green-fg">or</span> <span class="ansi-blue-fg">(</span>handle <span class="ansi-green-fg">and</span> feed_dict_tensor<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1123</span>       results = self._do_run(handle, final_targets, final_fetches,
-<span class="ansi-green-fg">-&gt; 1124</span><span class="ansi-red-fg">                              feed_dict_tensor, options, run_metadata)
-</span><span class="ansi-green-intense-fg ansi-bold">   1125</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1126</span>       results <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
-
-<span class="ansi-green-fg">/opt/conda/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">_do_run</span><span class="ansi-blue-fg">(self, handle, target_list, fetch_list, feed_dict, options, run_metadata)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1319</span>     <span class="ansi-green-fg">if</span> handle <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1320</span>       return self._do_call(_run_fn, self._session, feeds, fetches, targets,
-<span class="ansi-green-fg">-&gt; 1321</span><span class="ansi-red-fg">                            options, run_metadata)
-</span><span class="ansi-green-intense-fg ansi-bold">   1322</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1323</span>       <span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_do_call<span class="ansi-blue-fg">(</span>_prun_fn<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_session<span class="ansi-blue-fg">,</span> handle<span class="ansi-blue-fg">,</span> feeds<span class="ansi-blue-fg">,</span> fetches<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/opt/conda/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">_do_call</span><span class="ansi-blue-fg">(self, fn, *args)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1338</span>         <span class="ansi-green-fg">except</span> KeyError<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1339</span>           <span class="ansi-green-fg">pass</span>
-<span class="ansi-green-fg">-&gt; 1340</span><span class="ansi-red-fg">       </span><span class="ansi-green-fg">raise</span> type<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">(</span>node_def<span class="ansi-blue-fg">,</span> op<span class="ansi-blue-fg">,</span> message<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1341</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1342</span>   <span class="ansi-green-fg">def</span> _extend_graph<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">InvalidArgumentError</span>: Input to reshape is a tensor with 17408000 values, but the requested shape requires a multiple of 23000
-	 [[Node: time_distributed_17/Reshape_1 = Reshape[T=DT_FLOAT, Tshape=DT_INT32, _device=&#34;/job:localhost/replica:0/task:0/gpu:0&#34;](time_distributed_17/Relu, time_distributed_17/Reshape_1/shape)]]
-	 [[Node: loss_16/mul/_1309 = _Recv[client_terminated=false, recv_device=&#34;/job:localhost/replica:0/task:0/cpu:0&#34;, send_device=&#34;/job:localhost/replica:0/task:0/gpu:0&#34;, send_device_incarnation=1, tensor_name=&#34;edge_3364_loss_16/mul&#34;, tensor_type=DT_FLOAT, _device=&#34;/job:localhost/replica:0/task:0/cpu:0&#34;]()]]
-
-Caused by op &#39;time_distributed_17/Reshape_1&#39;, defined at:
-  File &#34;/opt/conda/lib/python3.6/runpy.py&#34;, line 193, in _run_module_as_main
-    &#34;__main__&#34;, mod_spec)
-  File &#34;/opt/conda/lib/python3.6/runpy.py&#34;, line 85, in _run_code
-    exec(code, run_globals)
-  File &#34;/opt/conda/lib/python3.6/site-packages/ipykernel_launcher.py&#34;, line 16, in &lt;module&gt;
-    app.launch_new_instance()
-  File &#34;/opt/conda/lib/python3.6/site-packages/traitlets/config/application.py&#34;, line 658, in launch_instance
-    app.start()
-  File &#34;/opt/conda/lib/python3.6/site-packages/ipykernel/kernelapp.py&#34;, line 478, in start
-    self.io_loop.start()
-  File &#34;/opt/conda/lib/python3.6/site-packages/zmq/eventloop/ioloop.py&#34;, line 177, in start
-    super(ZMQIOLoop, self).start()
-  File &#34;/opt/conda/lib/python3.6/site-packages/tornado/ioloop.py&#34;, line 888, in start
-    handler_func(fd_obj, events)
-  File &#34;/opt/conda/lib/python3.6/site-packages/tornado/stack_context.py&#34;, line 277, in null_wrapper
-    return fn(*args, **kwargs)
-  File &#34;/opt/conda/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py&#34;, line 440, in _handle_events
-    self._handle_recv()
-  File &#34;/opt/conda/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py&#34;, line 472, in _handle_recv
-    self._run_callback(callback, msg)
-  File &#34;/opt/conda/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py&#34;, line 414, in _run_callback
-    callback(*args, **kwargs)
-  File &#34;/opt/conda/lib/python3.6/site-packages/tornado/stack_context.py&#34;, line 277, in null_wrapper
-    return fn(*args, **kwargs)
-  File &#34;/opt/conda/lib/python3.6/site-packages/ipykernel/kernelbase.py&#34;, line 281, in dispatcher
-    return self.dispatch_shell(stream, msg)
-  File &#34;/opt/conda/lib/python3.6/site-packages/ipykernel/kernelbase.py&#34;, line 232, in dispatch_shell
-    handler(stream, idents, msg)
-  File &#34;/opt/conda/lib/python3.6/site-packages/ipykernel/kernelbase.py&#34;, line 397, in execute_request
-    user_expressions, allow_stdin)
-  File &#34;/opt/conda/lib/python3.6/site-packages/ipykernel/ipkernel.py&#34;, line 208, in do_execute
-    res = shell.run_cell(code, store_history=store_history, silent=silent)
-  File &#34;/opt/conda/lib/python3.6/site-packages/ipykernel/zmqshell.py&#34;, line 533, in run_cell
-    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)
-  File &#34;/opt/conda/lib/python3.6/site-packages/IPython/core/interactiveshell.py&#34;, line 2728, in run_cell
-    interactivity=interactivity, compiler=compiler, result=result)
-  File &#34;/opt/conda/lib/python3.6/site-packages/IPython/core/interactiveshell.py&#34;, line 2856, in run_ast_nodes
-    if self.run_code(code, result):
-  File &#34;/opt/conda/lib/python3.6/site-packages/IPython/core/interactiveshell.py&#34;, line 2910, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &#34;&lt;ipython-input-35-6ed38bba0e1c&gt;&#34;, line 35, in &lt;module&gt;
-    final_predictions(preproc_english_sentences, preproc_french_sentences, english_tokenizer, french_tokenizer)
-  File &#34;&lt;ipython-input-35-6ed38bba0e1c&gt;&#34;, line 12, in final_predictions
-    model = model_final(x.shape, y.shape[1], len(x_tk.word_index), len(y_tk.word_index))
-  File &#34;&lt;ipython-input-17-a5be3d4964a5&gt;&#34;, line 16, in model_final
-    x = TimeDistributed(Dense(1000, activation=&#39;relu&#39;))(x)
-  File &#34;/opt/conda/lib/python3.6/site-packages/keras/engine/topology.py&#34;, line 603, in __call__
-    output = self.call(inputs, **kwargs)
-  File &#34;/opt/conda/lib/python3.6/site-packages/keras/layers/wrappers.py&#34;, line 204, in call
-    y = K.reshape(y, (-1, input_length) + output_shape[2:])
-  File &#34;/opt/conda/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py&#34;, line 1772, in reshape
-    return tf.reshape(x, shape)
-  File &#34;/opt/conda/lib/python3.6/site-packages/tensorflow/python/ops/gen_array_ops.py&#34;, line 2619, in reshape
-    name=name)
-  File &#34;/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py&#34;, line 767, in apply_op
-    op_def=op_def)
-  File &#34;/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/ops.py&#34;, line 2630, in create_op
-    original_op=self._default_original_op, op_def=op_def)
-  File &#34;/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/ops.py&#34;, line 1204, in __init__
-    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
-
-InvalidArgumentError (see above for traceback): Input to reshape is a tensor with 17408000 values, but the requested shape requires a multiple of 23000
-	 [[Node: time_distributed_17/Reshape_1 = Reshape[T=DT_FLOAT, Tshape=DT_INT32, _device=&#34;/job:localhost/replica:0/task:0/gpu:0&#34;](time_distributed_17/Relu, time_distributed_17/Reshape_1/shape)]]
-	 [[Node: loss_16/mul/_1309 = _Recv[client_terminated=false, recv_device=&#34;/job:localhost/replica:0/task:0/cpu:0&#34;, send_device=&#34;/job:localhost/replica:0/task:0/gpu:0&#34;, send_device_incarnation=1, tensor_name=&#34;edge_3364_loss_16/mul&#34;, tensor_type=DT_FLOAT, _device=&#34;/job:localhost/replica:0/task:0/cpu:0&#34;]()]]
+110288/110288 [==============================] - 26s 234us/step - loss: 2.6150 - acc: 0.4969 - val_loss: 1.6115 - val_acc: 0.6056
+Epoch 2/10
+110288/110288 [==============================] - 24s 215us/step - loss: 1.1618 - acc: 0.7025 - val_loss: 0.8795 - val_acc: 0.7646
+Epoch 3/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.7334 - acc: 0.7966 - val_loss: 0.6141 - val_acc: 0.8226
+Epoch 4/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.5355 - acc: 0.8413 - val_loss: 0.4680 - val_acc: 0.8578
+Epoch 5/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.4221 - acc: 0.8699 - val_loss: 0.3755 - val_acc: 0.8832
+Epoch 6/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.3427 - acc: 0.8928 - val_loss: 0.3139 - val_acc: 0.9012
+Epoch 7/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.2863 - acc: 0.9099 - val_loss: 0.2662 - val_acc: 0.9164
+Epoch 8/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.2515 - acc: 0.9202 - val_loss: 0.2420 - val_acc: 0.9235
+Epoch 9/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.2207 - acc: 0.9299 - val_loss: 0.2179 - val_acc: 0.9309
+Epoch 10/10
+110288/110288 [==============================] - 24s 216us/step - loss: 0.1997 - acc: 0.9364 - val_loss: 0.1919 - val_acc: 0.9395
+Sample 1:
+il a vu un vieux camion jaune &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+Il a vu un vieux camion jaune
+Sample 2:
+&lt;PAD&gt; jersey est parfois calme pendant automne automne l&#39; il est il en &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+&lt;PAD&gt; jersey est parfois calme pendant l&#39; automne et il est neigeux en avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+CPU times: user 2min 13s, sys: 1min 43s, total: 3min 56s
+Wall time: 4min 5s
 </pre>
 </div>
 </div>
@@ -13146,7 +13067,7 @@ $ python -m nbconvert machine_translation.ipynb</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Save before you run this cell!</span>
@@ -13154,6 +13075,29 @@ $ python -m nbconvert machine_translation.ipynb</code></pre>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[56]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;[NbConvertApp] Converting notebook machine_translation-Copy1.ipynb to html&#39;,
+ &#39;[NbConvertApp] Writing 359474 bytes to machine_translation-Copy1.html&#39;,
+ &#39;[NbConvertApp] Converting notebook machine_translation.ipynb to html&#39;,
+ &#39;[NbConvertApp] Writing 326845 bytes to machine_translation.html&#39;]</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
